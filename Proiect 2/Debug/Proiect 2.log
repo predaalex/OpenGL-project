@@ -1,0 +1,17 @@
+﻿  Proiect2.cpp
+E:\Fac\Anul III\Sem II\Grafica pe Calculator\Proiecte\Proiect 2\Proiect2.cpp(28,15): warning C4244: 'initializing': conversion from 'LONG' to 'float', possible loss of data
+E:\Fac\Anul III\Sem II\Grafica pe Calculator\Proiecte\Proiect 2\Proiect2.cpp(29,15): warning C4244: 'initializing': conversion from 'LONG' to 'float', possible loss of data
+E:\Fac\Anul III\Sem II\Grafica pe Calculator\Proiecte\Proiect 2\Proiect2.cpp(30,25): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+E:\Fac\Anul III\Sem II\Grafica pe Calculator\Proiecte\Proiect 2\Proiect2.cpp(35,28): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+E:\Fac\Anul III\Sem II\Grafica pe Calculator\Proiecte\Proiect 2\Proiect2.cpp(52,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+E:\Fac\Anul III\Sem II\Grafica pe Calculator\Proiecte\Proiect 2\Proiect2.cpp(79,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\Fac\Anul III\Sem II\Grafica pe Calculator\Proiecte\Proiect 2\Proiect2.cpp(92,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\Fac\Anul III\Sem II\Grafica pe Calculator\Proiecte\Proiect 2\Proiect2.cpp(138,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\Fac\Anul III\Sem II\Grafica pe Calculator\Proiecte\Proiect 2\Proiect2.cpp(165,23): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+E:\Fac\Anul III\Sem II\Grafica pe Calculator\Proiecte\Proiect 2\Proiect2.cpp(199,16): warning C4305: '+=': truncation from 'double' to 'float'
+E:\Fac\Anul III\Sem II\Grafica pe Calculator\Proiecte\Proiect 2\Proiect2.cpp(234,11): warning C4305: '+=': truncation from 'double' to 'float'
+E:\Fac\Anul III\Sem II\Grafica pe Calculator\Proiecte\Proiect 2\Proiect2.cpp(237,11): warning C4305: '-=': truncation from 'double' to 'float'
+E:\Fac\Anul III\Sem II\Grafica pe Calculator\Proiecte\Proiect 2\Proiect2.cpp(240,16): warning C4305: '+=': truncation from 'double' to 'float'
+E:\Fac\Anul III\Sem II\Grafica pe Calculator\Proiecte\Proiect 2\Proiect2.cpp(244,16): warning C4305: '-=': truncation from 'double' to 'float'
+E:\Fac\Anul III\Sem II\Grafica pe Calculator\Proiecte\Proiect 2\Proiect2.cpp(298,36): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+  Proiect 2.vcxproj -> E:\Fac\Anul III\Sem II\Grafica pe Calculator\Proiecte\Proiect 2\Debug\Proiect 2.exe
