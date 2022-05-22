@@ -804,7 +804,7 @@ void renderScene(void) {
 
 	glPushMatrix();
 	glRotated(90, 0, 1, 0);
-	glTranslatef(0, 0, 1);
+	glTranslatef(17, 0, 0);
 
 	semnDeCirculatie();
 	glPopMatrix();
