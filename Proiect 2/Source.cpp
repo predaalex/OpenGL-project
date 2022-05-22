@@ -135,13 +135,13 @@ void semnDeCirculatie() {
 }
 
 void masina(float x = 0, float y = -0.1, float z = 2) {
-	//cadru 
-	
+	//cadru
+
 	glColor3f(0.4, 0.4, 0.1);
 	glPushMatrix();
 	glTranslatef(x + 0, y + 0.6, z + 0);
 	glScalef(2, 0.75, 1);
-	glutSolidCube(1);	
+	glutSolidCube(1);
 	glPopMatrix();
 
 	// partea de sus a masinii
@@ -189,7 +189,7 @@ void masina(float x = 0, float y = -0.1, float z = 2) {
 	glTranslatef(x + -0.5, y + 0.3, z + -0.7);
 	glutSolidCylinder(0.2, 0.2, 20, 20);
 	glPopMatrix();
-	
+
 	//stop stanga
 	glColor3f(0.8, 0, 0);
 	glPushMatrix();
@@ -224,9 +224,9 @@ void masina(float x = 0, float y = -0.1, float z = 2) {
 }
 
 void strada() {
-	
+
 	//asfalt
-	
+
 	glPushMatrix();
 	glColor3f(0.1, 0.03, 0.03);
 	glBegin(GL_QUADS);
@@ -359,10 +359,11 @@ void LoadTexture(void)
 	int width, height;
 	unsigned char* image = SOIL_load_image("iarba.jpg", &width, &height, 0, SOIL_LOAD_RGB);
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
-	// SOIL_free_image_data(image);
-	// glBindTexture(GL_TEXTURE_2D, 0);
+	SOIL_free_image_data(image);
+	//glBindTexture(GL_TEXTURE_2D, 0);
 
 }
+
 
 void renderScene(void) {
 	mousePosition();
@@ -398,13 +399,13 @@ void renderScene(void) {
 
 	// padure brazi
 	for (float i = -95; i <= 95; i += 5)
-		for (float j = -30; j <= 30; j += 5) 
+		for (float j = -30; j <= 30; j += 5)
 			if(abs(j) > 15)
 				brad(i, 0, j);
 
 	// miscare masina
 	masina(iii);
-	iii += 0.05;
+	iii += 0.25;
 	if (iii > 100)
 		iii = -100;
 
@@ -413,6 +414,7 @@ void renderScene(void) {
 	//semnDeCirculatie();
 
 	glPopMatrix();
+
 	glutSwapBuffers();
 }
 
