@@ -143,6 +143,7 @@ void semnDeCirculatie() {
 }
 
 void masina(float x = 0, float y = -0.1, float z = 2) {
+<<<<<<< HEAD
 	//cadru 
 	GLfloat diffuseCoeffn[] = { 0.0, 0.0, 0.0, 1.0 };
 	GLfloat caroserie[] = { 0.4, 0.4, 0.1, 1.0 };
@@ -153,6 +154,10 @@ void masina(float x = 0, float y = -0.1, float z = 2) {
 	GLfloat stopuri[] = { 0.8, 0, 0, 1 };
 
 	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, caroserie);
+=======
+	//cadru
+
+>>>>>>> d6a7407ab8d9a9f8d9570fef892a14deab9b9931
 	glColor3f(0.4, 0.4, 0.1);
 	glPushMatrix();
 	glTranslatef(x + 0, y + 0.6, z + 0);
@@ -243,6 +248,7 @@ void masina(float x = 0, float y = -0.1, float z = 2) {
 
 void strada() {
 
+<<<<<<< HEAD
 	GLfloat asfalt[] = { 0.1, 0.03, 0.03, 1 };
 	GLfloat dungiGalbene[] = { 0.8, 0.8, 0.0, 1 };
 	GLfloat dungiAlbe[] = { 0.8, 0.8, 0.8, 1 };
@@ -250,6 +256,8 @@ void strada() {
 
 	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, asfalt);
 
+=======
+>>>>>>> d6a7407ab8d9a9f8d9570fef892a14deab9b9931
 	//asfalt
 
 	glPushMatrix();
@@ -263,7 +271,10 @@ void strada() {
 	glPopMatrix();
 
 	// dungi  carosabil
+<<<<<<< HEAD
 	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, dungiGalbene);
+=======
+>>>>>>> d6a7407ab8d9a9f8d9570fef892a14deab9b9931
 
 	glPushMatrix();
 	glColor3f(0.8, 0.8, 0.0);
@@ -282,7 +293,10 @@ void strada() {
 	glVertex3f(100, 0.02f, -0.1f);
 	glEnd();
 
+<<<<<<< HEAD
 	glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE, dungiAlbe);
+=======
+>>>>>>> d6a7407ab8d9a9f8d9570fef892a14deab9b9931
 	glColor3f(0.8, 0.8, 0.8);
 
 	for (int i = -10; i < 10; i++) {
@@ -322,6 +336,7 @@ void strada() {
 	glEnd();
 
 }
+
 
 void brad(float x = 0, float y = 0, float z = 0) {
 	GLfloat trunchi[] = { 0.5f, 0.35f, 0.05f, 1 };
@@ -672,4 +687,3 @@ int main(int argc, char** argv) {
 
 	return 1;
 }
-
