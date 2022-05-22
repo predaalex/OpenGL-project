@@ -1,10 +1,10 @@
-//SURSA:  lighthouse3D:  http://www.lighthouse3d.com/tutorials/glut-tutorial/keyboard-example-moving-around-the-world/ 
-
 #include<gl/freeglut.h>
 #include <iostream>
 #include<math.h>
 #include <Windows.h>
 #include <WinUser.h>
+#include "SOIL.h"
+
 #define PI 3.1415927
 
 #define middleX 960;
@@ -136,12 +136,12 @@ void semnDeCirculatie() {
 
 void masina(float x = 0, float y = -0.1, float z = 2) {
 	//cadru 
-
+	
 	glColor3f(0.4, 0.4, 0.1);
 	glPushMatrix();
 	glTranslatef(x + 0, y + 0.6, z + 0);
 	glScalef(2, 0.75, 1);
-	glutSolidCube(1);
+	glutSolidCube(1);	
 	glPopMatrix();
 
 	// partea de sus a masinii
@@ -189,7 +189,7 @@ void masina(float x = 0, float y = -0.1, float z = 2) {
 	glTranslatef(x + -0.5, y + 0.3, z + -0.7);
 	glutSolidCylinder(0.2, 0.2, 20, 20);
 	glPopMatrix();
-
+	
 	//stop stanga
 	glColor3f(0.8, 0, 0);
 	glPushMatrix();
@@ -209,7 +209,7 @@ void masina(float x = 0, float y = -0.1, float z = 2) {
 	//far stanga
 	glColor3f(1, 1, 0);
 	glPushMatrix();
-	glTranslatef(x + 1, y + 0.65, z + -0.3);
+	glTranslatef(x + 1 , y + 0.65, z + -0.3);
 	glRotatef(90, 0, 1, 0);
 	glutSolidCylinder(0.06, 0.06, 20, 20);
 	glPopMatrix();
@@ -217,16 +217,16 @@ void masina(float x = 0, float y = -0.1, float z = 2) {
 	//far dreapta
 	glColor3f(1, 1, 0);
 	glPushMatrix();
-	glTranslatef(x + 1, y + 0.65, z + 0.3);
+	glTranslatef(x + 1 , y + 0.65, z + 0.3);
 	glRotatef(90, 0, 1, 0);
 	glutSolidCylinder(0.06, 0.06, 20, 20);
 	glPopMatrix();
 }
 
 void strada() {
-
+	
 	//asfalt
-
+	
 	glPushMatrix();
 	glColor3f(0.1, 0.03, 0.03);
 	glBegin(GL_QUADS);
@@ -294,6 +294,75 @@ void brad(float x = 0, float y = 0, float z = 0) {
 }
 
 float iii = -100;
+// -----------------------------------------
+
+
+const double TWO_PI = 6.2831853;
+GLsizei winWidth = 500, winHeight = 500;
+GLuint regHex;
+static GLfloat rotTheta = 0.0;
+
+class scrPt
+{
+public:
+	GLint x, y;
+};
+
+
+GLfloat texpts[2][2][2] = { {{1.0, 1.0}, {1.0, 0.0}},
+			{{0.0, 1.0}, {0.0, 0.0}} };
+
+#define	imageWidth 64
+#define	imageHeight 64
+
+GLubyte image[3 * imageWidth * imageHeight];
+GLuint texture1;
+
+void init(void)
+{
+	glClearColor(1.0, 1.0, 1.0, 0.0);
+	glMatrixMode(GL_PROJECTION);
+	glOrtho(-20.0, 780.0, 0.0, 600.0, -1.0, 1.0);
+
+	scrPt hexVertex;
+	GLdouble hexTheta;
+	GLint k;
+
+	glClearColor(1.0, 1.0, 1.0, 1.0);
+	regHex = glGenLists(1);
+	glNewList(regHex, GL_COMPILE);
+	glColor3f(1.0, 0.0, 0.0);
+	glBegin(GL_POLYGON);
+	for (k = 0; k < 31; k++)
+	{
+		hexTheta = TWO_PI * k / 31;
+		hexVertex.x = 100 * cos(hexTheta);
+		hexVertex.y = 100 * sin(hexTheta);
+		glVertex2i(hexVertex.x, hexVertex.y);
+	}
+	glEnd();
+	glEndList();
+
+}
+
+void LoadTexture(void)
+{
+	GLuint texture;
+	glGenTextures(1, &texture);
+	glBindTexture(GL_TEXTURE_2D, texture);
+
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);	// Set texture wrapping to GL_REPEAT
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	int width, height;
+	unsigned char* image = SOIL_load_image("iarba.jpg", &width, &height, 0, SOIL_LOAD_RGB);
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
+	// SOIL_free_image_data(image);
+	// glBindTexture(GL_TEXTURE_2D, 0);
+
+}
 
 void renderScene(void) {
 	mousePosition();
@@ -307,14 +376,19 @@ void renderScene(void) {
 		x + lx, y + ly, z + lz,
 		0.0f, 1.1f, 0.0f);
 
-	// Draw ground
+	// texture on ground
 	glColor3f(0.5, 0.2, 0);
+	glEnable(GL_TEXTURE_2D);
+	LoadTexture();
+
 	glBegin(GL_QUADS);
-	glVertex3f(-100.0f, 0.0f, -100.0f);
-	glVertex3f(-100.0f, 0.0f, 100.0f);
-	glVertex3f(100.0f, 0.0f, 100.0f);
-	glVertex3f(100.0f, 0.0f, -100.0f);
+	glTexCoord2f(1.0, 1.0); glColor3f(1.0, 0.1, 0.1);  glVertex3f(-100.0f, 0.0f, -100.0f);
+	glTexCoord2f(1.0, 0.0); glColor3f(0.1, 1.0, 0.1);  glVertex3f(-100.0f, 0.0f, 100.0f);
+	glTexCoord2f(0.0, 0.0); glColor3f(1.0, 1.0, 0.1); glVertex3f(100.0f, 0.0f, 100.0f);
+	glTexCoord2f(0.0, 1.0); glColor3f(0.0, 0.1, 1.0); glVertex3f(100.0f, 0.0f, -100.0f);
 	glEnd();
+
+	glDisable(GL_TEXTURE_2D);
 
 	strada();
 
@@ -324,8 +398,8 @@ void renderScene(void) {
 
 	// padure brazi
 	for (float i = -95; i <= 95; i += 5)
-		for (float j = -30; j <= 30; j += 5)
-			if (abs(j) > 15)
+		for (float j = -30; j <= 30; j += 5) 
+			if(abs(j) > 15)
 				brad(i, 0, j);
 
 	// miscare masina
@@ -487,6 +561,8 @@ int main(int argc, char** argv) {
 	glutInitWindowSize(800, 800);
 
 	glutCreateWindow("Scena 3D cu oameni de zapada");
+
+	init();
 
 	// register callbacks
 	glutDisplayFunc(renderScene);

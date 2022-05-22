@@ -1,0 +1,67 @@
+﻿  Source.cpp
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(30,15): warning C4244: 'initializing': conversion from 'LONG' to 'float', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(31,15): warning C4244: 'initializing': conversion from 'LONG' to 'float', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(32,25): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(37,28): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(54,14): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(81,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(94,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(123,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(140,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(142,24): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(148,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(151,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(156,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(159,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(164,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(166,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(166,26): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(166,17): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(172,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(174,36): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(174,27): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(174,17): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(179,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(181,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(181,26): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(181,17): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(187,25): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(189,36): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(189,27): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(189,17): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(194,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(196,38): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(196,28): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(196,17): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(202,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(204,38): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(204,28): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(204,17): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(212,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(212,25): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(220,35): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(220,25): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(231,27): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(244,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(246,17): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(247,17): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(248,24): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(249,24): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(282,15): warning C4305: 'initializing': truncation from 'double' to 'float'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(286,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(292,11): warning C4305: '+=': truncation from 'double' to 'float'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(339,21): warning C4244: '=': conversion from 'double' to 'GLint', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(340,21): warning C4244: '=': conversion from 'double' to 'GLint', possible loss of data
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(380,23): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(385,49): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(386,49): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(387,49): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(388,49): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(407,13): warning C4305: '+=': truncation from 'double' to 'float'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(433,16): warning C4305: '+=': truncation from 'double' to 'float'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(468,11): warning C4305: '+=': truncation from 'double' to 'float'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(471,11): warning C4305: '-=': truncation from 'double' to 'float'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(474,16): warning C4305: '+=': truncation from 'double' to 'float'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(478,16): warning C4305: '-=': truncation from 'double' to 'float'
+F:\GL\ProjectOpenGL\ProjectOpenGL\Source.cpp(532,36): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+  ProjectOpenGL.vcxproj -> F:\GL\ProjectOpenGL\Debug\ProjectOpenGL.exe
