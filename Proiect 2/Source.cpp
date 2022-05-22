@@ -209,7 +209,7 @@ void masina(float x = 0, float y = -0.1, float z = 2) {
 	//far stanga
 	glColor3f(1, 1, 0);
 	glPushMatrix();
-	glTranslatef(x + 1 , y + 0.65, z + -0.3);
+	glTranslatef(x + 1, y + 0.65, z + -0.3);
 	glRotatef(90, 0, 1, 0);
 	glutSolidCylinder(0.06, 0.06, 20, 20);
 	glPopMatrix();
@@ -217,7 +217,7 @@ void masina(float x = 0, float y = -0.1, float z = 2) {
 	//far dreapta
 	glColor3f(1, 1, 0);
 	glPushMatrix();
-	glTranslatef(x + 1 , y + 0.65, z + 0.3);
+	glTranslatef(x + 1, y + 0.65, z + 0.3);
 	glRotatef(90, 0, 1, 0);
 	glutSolidCylinder(0.06, 0.06, 20, 20);
 	glPopMatrix();
@@ -230,23 +230,48 @@ void strada() {
 	glPushMatrix();
 	glColor3f(0.1, 0.03, 0.03);
 	glBegin(GL_QUADS);
-	glVertex3f(-100.0f, 0.01f, -4.0f);
-	glVertex3f(-100.0f, 0.01f, 4.0f);
-	glVertex3f(100.0f, 0.01f, 4.0f);
-	glVertex3f(100.0f, 0.01f, -4.0f);
+	glVertex3f(-100.0f, 0.01f, -10.0f);
+	glVertex3f(-100.0f, 0.01f, 10.0f);
+	glVertex3f(100.0f, 0.01f, 10.0f);
+	glVertex3f(100.0f, 0.01f, -10.0f);
 	glEnd();
 	glPopMatrix();
 
-	// dunga centru carosabil
+	// dungi  carosabil
+
+	glPushMatrix();
+	glColor3f(0.8, 0.8, 0.0);
+
+	glBegin(GL_QUADS);
+	glVertex3f(-100, 0.02f, 0.1f);
+	glVertex3f(-100, 0.02f, 0.2f);
+	glVertex3f(100, 0.02f, 0.2f);
+	glVertex3f(100, 0.02f, 0.1f);
+	glEnd();
+
+	glBegin(GL_QUADS);
+	glVertex3f(-100, 0.02f, -0.1f);
+	glVertex3f(-100, 0.02f, -0.2f);
+	glVertex3f(100, 0.02f, -0.2f);
+	glVertex3f(100, 0.02f, -0.1f);
+	glEnd();
+
+	glColor3f(0.8, 0.8, 0.8);
+
 	for (int i = -10; i < 10; i++) {
 
-		glPushMatrix();
-		glColor3f(0.8, 0.8, 0.8);
 		glBegin(GL_QUADS);
-		glVertex3f((i * 10), 0.02f, -0.1f);
-		glVertex3f((i * 10), 0.02f, 0.1f);
-		glVertex3f(((i * 10) - 7), 0.02f, 0.1f);
-		glVertex3f(((i * 10) - 7), 0.02f, -0.1f);
+		glVertex3f((i * 10), 0.02f, 4.9f);
+		glVertex3f((i * 10), 0.02f, 5.1f);
+		glVertex3f(((i * 10) - 7), 0.02f, 5.1f);
+		glVertex3f(((i * 10) - 7), 0.02f, 4.9f);
+		glEnd();
+
+		glBegin(GL_QUADS);
+		glVertex3f((i * 10), 0.02f, -5.1f);
+		glVertex3f((i * 10), 0.02f, -4.9f);
+		glVertex3f(((i * 10) - 7), 0.02f, -4.9f);
+		glVertex3f(((i * 10) - 7), 0.02f, -5.1f);
 		glEnd();
 		glPopMatrix();
 
@@ -254,20 +279,21 @@ void strada() {
 
 	// dungi laterale ale carosabililui
 	glBegin(GL_QUADS);
-	glVertex3f(-100.0f, 0.02f, -3.9f);
-	glVertex3f(-100.0f, 0.02f, -3.8f);
-	glVertex3f(100.0f, 0.02f, -3.8f);
-	glVertex3f(100.0f, 0.02f, -3.9f);
+	glVertex3f(-100.0f, 0.02f, -9.9f);
+	glVertex3f(-100.0f, 0.02f, -9.8f);
+	glVertex3f(100.0f, 0.02f, -9.8f);
+	glVertex3f(100.0f, 0.02f, -9.9f);
 	glEnd();
 
 	glBegin(GL_QUADS);
-	glVertex3f(-100.0f, 0.02f, 3.9f);
-	glVertex3f(-100.0f, 0.02f, 3.8f);
-	glVertex3f(100.0f, 0.02f, 3.8f);
-	glVertex3f(100.0f, 0.02f, 3.9f);
+	glVertex3f(-100.0f, 0.02f, 9.9f);
+	glVertex3f(-100.0f, 0.02f, 9.8f);
+	glVertex3f(100.0f, 0.02f, 9.8f);
+	glVertex3f(100.0f, 0.02f, 9.9f);
 	glEnd();
 
 }
+
 
 void brad(float x = 0, float y = 0, float z = 0) {
 	glPushMatrix();
@@ -360,10 +386,9 @@ void LoadTexture(void)
 	unsigned char* image = SOIL_load_image("iarba.jpg", &width, &height, 0, SOIL_LOAD_RGB);
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, image);
 	SOIL_free_image_data(image);
-	//glBindTexture(GL_TEXTURE_2D, 0);
+	// glBindTexture(GL_TEXTURE_2D, 0);
 
 }
-
 
 void renderScene(void) {
 	mousePosition();
@@ -400,12 +425,12 @@ void renderScene(void) {
 	// padure brazi
 	for (float i = -95; i <= 95; i += 5)
 		for (float j = -30; j <= 30; j += 5)
-			if(abs(j) > 15)
+			if (abs(j) > 15)
 				brad(i, 0, j);
 
 	// miscare masina
 	masina(iii);
-	iii += 0.25;
+	iii += 0.05;
 	if (iii > 100)
 		iii = -100;
 
@@ -414,7 +439,6 @@ void renderScene(void) {
 	//semnDeCirculatie();
 
 	glPopMatrix();
-
 	glutSwapBuffers();
 }
 
@@ -597,4 +621,3 @@ int main(int argc, char** argv) {
 
 	return 1;
 }
-
